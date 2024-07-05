@@ -1,0 +1,21 @@
+# Make and run docker container on local_port:container:port named boom based on image nginx
+docker container run --publish 80:80 --detach --name boom nginx
+docker container run -p 80:80 -d -n boom nginx
+
+# Show logs from the container named boom
+docker container logs boom
+
+# Show processlist of the container
+docker container top boom
+
+docker container --help
+
+# List all containers
+docker container ls -a
+
+# Delete container named boom, can take multiple names or container ids
+docker container rm boom
+
+## Remove container with force (active one)
+docker container rm -f boom
+
