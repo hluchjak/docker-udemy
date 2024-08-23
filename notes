@@ -28,7 +28,7 @@ docker container rm boom
 ## Remove container with force (active one)
 docker container rm -f boom
 
-# Env options
+# Pass env options
 --env
 
 # Show container details
