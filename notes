@@ -2,6 +2,15 @@
 docker container run --publish 80:80 --detach --name boom nginx
 docker container run -p 80:80 -d -n boom nginx
 
+# Run container in interactive mode
+docker container run -it
+
+# Run container in interactive mode with bash
+docker container exec -it
+
+# Stop container named boom
+docker container stop boom
+
 # Show logs from the container named boom
 docker container logs boom
 
@@ -19,3 +28,10 @@ docker container rm boom
 ## Remove container with force (active one)
 docker container rm -f boom
 
+# Env options
+--env
+
+# Show container details
+docker container top
+docker container inspect
+docker container stats
